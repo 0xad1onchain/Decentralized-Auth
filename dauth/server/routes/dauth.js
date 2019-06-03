@@ -17,7 +17,6 @@ router.get("/:id",function(req, res, next){
 	console.log(username)
     UserModel.User.findOne({username:username}, function(error, user){
 	console.log(error);
-	console.log("Fuck you");
 	if(error || !user){
 		console.log("entered error");
 	    res.render('dauth',{username:undefined});
